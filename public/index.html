@@ -1,0 +1,36 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD Demo App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CI/CD Pipeline Demo</h1>
+    <p>This application is deployed through an automated CI/CD pipeline</p>
+    <div id="status">Loading status...</div>
+    <div class="env-indicator">
+      <span id="environment">Unknown</span> Environment
+    </div>
+  </div>
+  
+  <script>
+    // Fetch status from API
+    fetch('/api/status')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('status').textContent = 
+          `Status: ${data.status} (updated: ${new Date(data.timestamp).toLocaleTimeString()})`;
+        document.getElementById('environment').textContent = data.environment;
+        document.getElementById('environment').className = data.environment;
+      })
+      .catch(error => {
+        document.getElementById('status').textContent = 'Error fetching status';
+        console.error('Error:', error);
+      });
+  </script>
+</body>
+</html>
