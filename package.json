@@ -19,3 +19,9 @@
     "supertest": "^6.3.3"
   }
 }
+{
+  "jest": {
+    "testTimeout": 10000,
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
+  }
+}
