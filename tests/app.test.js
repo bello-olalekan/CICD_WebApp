@@ -11,8 +11,7 @@ describe('API Endpoints', () => {
   });
 });
 
-// In your test file
-let server;
+// In your test file 
 
 beforeAll(() => {
   // Start your server
