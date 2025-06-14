@@ -10,3 +10,15 @@ describe('API Endpoints', () => {
     expect(response.body).toHaveProperty('timestamp');
   });
 });
+
+// In your test file 
+
+beforeAll(() => {
+  // Start your server
+  server = app.listen(3000);
+});
+
+afterAll((done) => {
+  // Close the server
+  server.close(done);
+});

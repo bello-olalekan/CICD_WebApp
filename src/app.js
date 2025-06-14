@@ -1,6 +1,5 @@
 // app.js - Main application file
-const express = require('express');
-const app = express();
+import React from 'react';
 const port = process.env.PORT || 3000;
 
 // Serve static files from 'public' directory
@@ -21,4 +20,6 @@ app.listen(port, () => {
 });
 
 // Export for testing
-module.exports = app;
+//module.exports = app;
+
+export default App;
