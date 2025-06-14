@@ -1,6 +1,6 @@
 name: Deploy to AWS EC2 Instance
 # This workflow deploys a Node.js application to an AWS EC2 instance using SSH and SCP. It includes steps for checking out the code, installing dependencies, running tests, building the application, and deploying it to the EC2 instance.
-description: Deploy a Node.js application to AWS EC2 instance using SSH and SCP.
+# description: Deploy a Node.js application to AWS EC2 instance using SSH and SCP.
 on:
   push:
     branches: [ main, master ]
