@@ -14,10 +14,11 @@
   },
   "devDependencies": {
     "eslint": "^8.42.0",
-    "jest": "^29.6.0",
-    "testTimeout": 10000,
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
     "nodemon": "^2.0.22",
     "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testTimeout": 10000,
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
   }
 }
