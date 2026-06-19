@@ -15,10 +15,12 @@ app.get('/api/status', (req, res) => {
   });
 });
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// Start server when run directly
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
 
 // Export for testing
 module.exports = app;
