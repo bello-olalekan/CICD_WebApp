@@ -1,0 +1,25 @@
+aws_region = "us-east-1"
+
+github_repository  = "bello-olalekan/CICD_WebApp"
+github_branch      = "main"
+github_environment = "production"
+
+ecr_repository_name          = "cicd-webapp"
+ecs_cluster_name             = "sunny-eagle-8hn96b"
+ecs_service_name             = "cicd-webapp-service"
+ecs_task_family              = "cicd-webapp"
+ecs_task_execution_role_name = "ecsTaskExecutionRole"
+
+alb_name                     = "cicd-webapp-alb"
+target_group_name            = "cicd-webapp-tg"
+alb_subnet_ids = [
+  "subnet-004afc8a0f89f73cf",
+  "subnet-07e63dc2d16c5915d",
+  "subnet-0d74ed82e115cac7a"
+]
+alb_security_group_name      = "cicd-webapp-alb-sg"
+alb_security_group_description = "CICD_Web_App_SG"
+ecs_task_security_group_name = "cicd-webapp-task-sg"
+ecs_task_security_group_description = "cicd-webapp"
+
+log_group_name = "/ecs/cicd-webapp"

@@ -25,3 +25,17 @@ Create this GitHub Actions secret:
 - `AWS_ROLE_TO_ASSUME`: the IAM role GitHub Actions assumes with OIDC
 
 The ECS service should be a Fargate service with networking configured for port `3000`.
+
+## Infrastructure as Code
+
+Terraform files are available in `terraform/` to provision the AWS infrastructure for this app:
+
+- ECR
+- CloudWatch Logs
+- ECS Fargate
+- IAM roles
+- GitHub Actions OIDC role
+- Application Load Balancer
+- Security groups
+
+See `terraform/README.md` before applying, especially if the resources already exist in AWS and need to be imported into Terraform state.
